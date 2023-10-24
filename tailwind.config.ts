@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type {Config} from 'tailwindcss'
 
 const config: Config = {
   content: [
@@ -12,6 +12,15 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      screens: {
+        'xs': '475px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        '3xl': '1600px',
       },
     },
   },

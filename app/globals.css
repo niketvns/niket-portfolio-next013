@@ -1,27 +1,71 @@
 @tailwind base;
+
+/* Custom Scrollbar */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+    background: #151221;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--card-primary);
+    border-radius: 14px;
+}
+
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+    --bg-primary: #14131a;
+    --card-primary: #1c1b23;
+    --bg-highlight: #2bd576;
+    --btn-primary: #3a3942;
+    --btn-secondary: #1c1b23;
+    --text-primary: #8b8a91;
+    --text-secondary: #79787f;
+    --text-info: #4f4f52;
+    --text-highlight: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/*Defining my own utility classes*/
+@layer utilities {
+    .bg-primary {
+        background-color: var(--bg-primary);
+    }
+    .card-primary {
+        background-color: var(--card-primary);
+    }
+    .bg-highlight {
+        background-color: var(--bg-highlight);
+    }
+    .btn-primary {
+        background-color: var(--btn-primary);
+    }
+    .btn-secondary {
+        background-color: var(--btn-secondary);
+    }
+    .text-primary {
+        color: var(--text-primary);
+    }
+    .text-secondary {
+        color: var(--text-secondary);
+    }
+    .text-info {
+        color: var(--text-info);
+    }
+    .text-highlight {
+        color: var(--text-highlight);
+    }
 }
