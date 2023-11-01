@@ -1,13 +1,17 @@
 import {Project} from '@/types'
 import Link from 'next/link'
-import React from 'react'
+import React, {FC} from 'react'
 import {IoIosArrowForward} from 'react-icons/io'
 
 type Props = {
     project: Project
 }
 
-const OtherProjectCard: React.FC<Props> = ({project}) => {
+const OtherProjectCard: FC<Props> = ({project}) => {
+    const {Icon} = project;
+
+    if(!Icon) return null
+
     return (
         <Link
             href={project.github}
@@ -17,7 +21,7 @@ const OtherProjectCard: React.FC<Props> = ({project}) => {
             rel='noopener noreferer'
         >
             <div className="icon text-xl">
-                <project.Icon />
+                <Icon className='text-2xl' />
             </div>
             <div className="details flex-1">
                 <h2 className="mb-2">{project.title}</h2>

@@ -8,7 +8,7 @@ import SidebarBody from "@/app/components/SidebarBody";
 import SidebarWrapper from './SidebarWrapper';
 
 type Props = {}
-const Sidebar: FC<Props> = (props): JSX.Element => {
+const Sidebar: FC<Props> = ({}): JSX.Element => {
     const navItems: NavItemsType = getSidebarItems();
     const socialItems: SocialItemsType = getSocialItems();
 
@@ -40,6 +40,7 @@ const Sidebar: FC<Props> = (props): JSX.Element => {
                                 href='/'
                                 className='flex items-center gap-4 p-4 hover:-translate-y-0.5 transition-all ease-in-out duration-100'
                             >
+                                {/* {console.log("sidebar: " + Icon)} */}
                                 <Icon className='text-2xl' />
                                 <span className='text-sm'>{key}</span>
                             </Link>
